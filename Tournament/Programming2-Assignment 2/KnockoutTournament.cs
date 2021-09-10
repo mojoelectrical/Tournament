@@ -11,6 +11,13 @@ namespace Programming2_Assignment_2
         int noOfMatches = 0;
         Random random = new Random(1);
         public KnockoutTournament(string Name) : base(Name) { }
+        
+        
+        /*
+        The method will set the winner of the match with  the provided teams. The winning team is then added to avalableTeams list. If all  available matches in the tournament are 
+        finished and there are more rounds that need to be played, the new round of matches is set by calling the SetMatches method.
+        */
+        
         public override void AddWinner(Team winner, Team loser) {
             if (Matches.Count >= 1)
             {
@@ -27,6 +34,10 @@ namespace Programming2_Assignment_2
                 }
             }
         }
+        /*
+        The method sets the new round of matches. It randomly matches the teams. If there is an odd number of available teams for the round the team that is left
+        after all other available teams are matched up will automatically advance to the next round.
+        */
         public override void SetMatches()
         {
             Matches.Clear();
