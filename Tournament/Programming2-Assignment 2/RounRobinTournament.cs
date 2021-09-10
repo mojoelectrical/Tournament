@@ -9,6 +9,11 @@ namespace Programming2_Assignment_2
         public RounRobinTournament(string Name) : base(Name) {
 
         }
+        
+        /*
+        This method will create all matches that will be played in the roundrobin
+        tournament. In round-robin tournament every team plays all other teams once.
+        */
 
         public override void SetMatches() {
             int count = 1;
